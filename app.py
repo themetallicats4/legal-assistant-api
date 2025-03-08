@@ -1,3 +1,4 @@
+import spacy
 from flask import Flask, request, jsonify
 import os
 import openai
@@ -5,6 +6,16 @@ import pinecone
 from dotenv import load_dotenv
 from database import get_law_by_id
 from vector_search import search_law
+import subprocess
+
+MODEL_NAME = "xx_ent_wiki_sm"
+
+try:
+    nlp = spacy.load(MODEL_NAME)
+except OSError:
+    print(f"🔄 {MODEL_NAME} model not found. Downloading now...")
+    subprocess.run(["python", "-m", "spacy", "download", MODEL_NAME])
+    nlp = spacy.load(MODEL_NAME)
 
 # Load environment variables
 load_dotenv()

@@ -1,9 +1,9 @@
 flask
 gunicorn
 openai
-pinecone
+pinecone-client
 psycopg2-binary
 python-dotenv
 spacy==3.5.2
-thinc==8.1.7
+thinc==8.1.8
 numpy==1.23.5
