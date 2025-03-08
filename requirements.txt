@@ -5,5 +5,5 @@ pinecone-client
 psycopg2-binary
 python-dotenv
 spacy==3.5.2
-thinc==8.1.8
-numpy==1.23.5
+thinc==8.1.9
+numpy==1.23.3
