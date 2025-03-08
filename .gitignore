@@ -1,0 +1,15 @@
+# Ignore environment variables
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.db
+.DS_Store
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE settings
+.idea/
+.vscode/
